@@ -1,9 +1,9 @@
 {
-  "name": "initprism-dev",
+  "name": "initprism-blog",
   "version": "1.0.0",
   "description": "personal blog",
   "author": "initprism",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "zola-build": "zola build",
     "zola-serve": "zola serve",

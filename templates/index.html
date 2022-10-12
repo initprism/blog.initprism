@@ -1,0 +1,126 @@
+{% import ".macros.html" as macros %}
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    {% include "common/head.html" %}
+
+    {% for page in paginator.pages %}
+    {% if page.extra.katex %}
+    {% set_global include_katex = true %}
+    {% endif %}
+    {% endfor %}
+
+    {% if include_katex %}
+    {% include "common/katex.html" %}
+    <script src="/js/math.js"></script>
+    {% endif %}
+
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        {% include "common/header.html" %}
+
+        <!-- main post -->
+        <div id="main">
+            {% block content %}
+            {% for page in paginator.pages %}
+            <article class="post">
+                {{ macros::title(page=page) }}
+
+                {% if page.extra.banner %}
+                <span class="image featured">
+                    <img src="/images/banner/{{ page.extra.banner }}" alt="banner" />
+                </span>
+                {% endif %}
+
+                {{ page.summary | safe }}
+                <footer>
+                    <ul class="actions">
+                        <li><a href="{{ page.permalink }}#continue-reading" class="button big">Continue Reading</a></li>
+                    </ul>
+
+                    <ul class="stats">
+                        {% for tag in page.taxonomies.tags %}
+                        <li><a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </footer>
+            </article>
+            {% endfor %}
+            {% endblock content %}
+
+            <ul class="actions pagination">
+                <li>
+                    {% if paginator.previous %}
+                    <a href="{{ paginator.previous }}" class="button big">
+                        <i class="fao fa-chevron-double-left">Newer Posts</i> 
+                    </a>
+                    {% else %}
+                    <a href="#" class="disabled button big">Latest Posts</a>
+                    {% endif %}
+                </li>
+                <li>
+                    {% if paginator.next %}
+                    <a href="{{ paginator.next }}" class="button big">
+                        <i class="fao fa-chevron-double-right">Older Posts</i>
+                    </a>
+                    {% else %}
+                    <a href="#" class="disabled button big">Oldest Posts</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+
+        <!-- sidebar -->
+        <section id="sidebar">
+            <section id="intro">
+                <img src="/logo.svg" alt="{{ config.title }}" class="logo" />
+                <header>
+                    <h2>{{ config.title }}</h2>
+                    <p>{{ config.description }}</p>
+                </header>
+            </section>
+
+            <!--mini post-->
+            <section>
+                <div class="mini-posts">
+                    <article class="mini-post">
+                        <header>
+                            <h3><a href="https://odyssey.neophilus.net">Odyssey</a></h3>
+                            <span class="published">The world is a book and those who do not travel read only one page.</span>
+                        </header>
+                        <a href="https://odyssey.neophilus.net" class="image bg5">
+                            <img src="/images/odyssey.png"alt="Odyssey" />
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- git links -->
+            <section>
+                <ul class="posts">
+                    {{ macros::github(repo="ip", blurb="Haskell implemented IPv4 filtering application", thumb="ip.png") }}
+                </ul>
+            </section>
+
+            <!-- about -->
+            <section class="blurb">
+                <h2>About The Author</h2>
+                <p>My name is Taein Kim, and I write a lot of software. I currently live in Seoul, South Korea.</p>
+
+                <ul class="actions">
+                    <li><a href="/about">Learn More</a></li>
+                </ul>
+            </section>
+            
+            {% include "common/footer.html" %}
+        </section>
+    </div>   
+
+    <script src="/js/initprism.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+title = "intprism dev"
+description = "functional programming, static types, programming language research, and Ham radio"
+base_url = "https://initprism.com"
+default_language = "en"
+
+compile_sass = true
+build_search_index = true
+highlight_theme = "charcoal"
+generate_feed = true
+
+taxonomies = [{ name = "tags" }]
+
+[markdown]
+highlight_code = true
+extra_syntaxes = ["syntaxes"]
+
+[extra.author]
+name = "initprism"

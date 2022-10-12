@@ -1,0 +1,12 @@
+public/
+node_modules/
+package-lock.json
+
+static/js/initprism.js
+src/elasticlunr.min.js
+src/search_index.en.js
+
+.firebase
+database.rules.json
+firebase.json
+.firebaserc

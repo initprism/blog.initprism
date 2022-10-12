@@ -1,0 +1,63 @@
+<header id="header">
+    <h1><a href="{{ config.base_url }}">{{ config.title }}</a></h1>
+    <nav class="links">
+        <ul>
+            <li><a href="{{ config.base_url }}">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/article">Article</a></li>
+            <li><a href="/tags">Tags</a></li>
+            <li><a href="/atom.xml">Feed</a></li>
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul class="icons">
+            <li class="menu">
+                <a href="#menu" title="Menu">
+                    <span class="wide"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <span class="narrow"><i class="fa-solid fa-bars"></i></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section id="menu">
+    <section>
+        <form class="search">
+            <input type="text" id="searchmenu" placeholder="Search" />
+        </form>
+        <div class="search-results">
+            <div class="search-results__items"></div>
+        </div>
+    </section>
+
+    <section>
+        <ul class="links">
+            <li>
+                <a href="{{ config.base_url }}">
+                    <h3>Home</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/about">
+                    <h3>About</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/article">
+                    <h3>Article</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <h3>Tags</h3>
+                </a>
+            </li>
+            <li>
+                <a href="/rss.xml">
+                    <h3>Feed</h3>
+                </a>
+            </li>
+        </ul>
+    </section>
+</section>

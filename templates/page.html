@@ -1,0 +1,71 @@
+{% import ".macros.html" as macros %}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    {% include "common/head.html" %}
+
+    {% if page.extra.katex %}
+    <script src="/js/math.js"></script>
+    {% include "common/katex.html" %}
+    {% endif %}
+
+</head>
+   
+<body class="single is-preload">
+    <div id="wrapper">
+        {% include "common/header.html" %}
+
+        <div id="main">
+            {% block content %}
+            <article class="post">
+                {{ macros::title(page=page) }}
+
+                {% if page.extra.banner %}
+                <span class="image featured">
+                    <img src="/images/banner/{{ page.extra.banner }}" alt="banner" />
+                </span>
+                {% endif %}
+
+                {{ page.content | safe }}
+
+                <footer>
+                    <ul class="stats">
+                        {% for tag in page.taxonomies.tags %}
+                        <li><a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </footer>
+            </article>
+
+            <center>
+                <ul class="actions pagination">
+                    <li>
+                        {% if page.later %}
+                        <a href="{{ page.later.permalink }}" class="button big">
+                            <i class="fao fa-chevron-double-left"></i>
+                            Newer Post</a>
+                        {% else %}
+                        <a href="#" class="disabled button big">Newest Post</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if page.earlier %}
+                        <a href="{{ page.earlier.permalink }}" class="button big">Older Post <i
+                                class="fao fa-chevron-double-right"></i></a>
+                        {% else %}
+                        <a href="#" class="disabled button big">Oldest Post</a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </center>
+            {% endblock content %}
+
+            {% include "common/footer.html" %}
+            </section>
+        </div>
+
+        <script src="/js/initprism.js"></script>
+</body>
+
+</html>

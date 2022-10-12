@@ -1,0 +1,24 @@
+{
+  "name": "initprism-dev",
+  "version": "1.0.0",
+  "description": "personal blog",
+  "author": "initprism",
+  "license": "ISC",
+  "scripts": {
+    "zola-build": "zola build",
+    "zola-serve": "zola serve",
+    "search": "copyfiles -u 1 public/elasticlunr.min.js src && copyfiles -u 1 public/search_index.en.js src",
+    "uglify": "uglifyjs --compress --mangle -o static/js/initprism.js src/jquery.min.js src/breakpoints.min.js src/browser.min.js src/util.js src/main.js src/elasticlunr.min.js src/search.js src/search_index.en.js",
+    "clear": "del-cli static/js/initprism.js",
+    "build-search": "npm run clear && npm run zola-build && npm run search && npm run uglify",
+    "build": "npm run build-search && npm run zola-build",
+    "start": "http-server public"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "del-cli": "^5.0.0",
+    "http-server": "^14.1.1",
+    "uglify-js": "^3.17.3",
+    "zola-bin": "^0.3.5"
+  }
+}

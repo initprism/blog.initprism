@@ -30,8 +30,8 @@ I hope to participate in an open-source project. and you can email me at [**init
 
 ### Certification & License
 <b>·</b> Bachelor of Science in Computer Engineering  
-<b>·</b> Engineer Information Security
-<b>·</b> First Class Amateur Radio Operator
+<b>·</b> Engineer Information Security  
+<b>·</b> First Class Amateur Radio Operator  
 
 ### Outside of academic pursuits
 My interests include [**Ham radio**](https://www.qrz.com/db/DS1UIG), Radio communication Technique(especially [LoRa](https://en.wikipedia.org/wiki/LoRa), [Meshtastic](https://meshtastic.org/)), 

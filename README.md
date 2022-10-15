@@ -11,12 +11,3 @@ npm install --global http-server
 npm run build
 npm run start
 ```
-
-## Deploy
-```
-npm install --global firebase-tools
-
-firebase login
-firebase init
-firebase deploy
-```

@@ -10,3 +10,5 @@ src/search_index.en.js
 database.rules.json
 firebase.json
 .firebaserc
+
+.temp

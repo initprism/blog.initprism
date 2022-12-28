@@ -1,5 +1,5 @@
-title = "intprism"
-description = "functional programming, static types, programming language research, and Ham radio"
+title = "Taein's dev"
+description = "functional programming, static types, programming language research, logical inference"
 base_url = "https://initprism.com"
 default_language = "en"
 
@@ -15,4 +15,4 @@ highlight_code = true
 extra_syntaxes = ["syntaxes"]
 
 [extra.author]
-name = "initprism"
+name = "TaeinKim"

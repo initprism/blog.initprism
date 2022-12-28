@@ -77,7 +77,7 @@
         <!-- sidebar -->
         <section id="sidebar">
             <section id="intro">
-                <img src="/logo.svg" alt="{{ config.title }}" class="logo" />
+                <img src="/icon/logo.svg" alt="{{ config.title }}" class="logo" />
                 <header>
                     <h2>{{ config.title }}</h2>
                     <p>{{ config.description }}</p>
@@ -89,11 +89,21 @@
                 <div class="mini-posts">
                     <article class="mini-post">
                         <header>
+                            <h3><a href="https://blog.initprism.com">Blog</a></h3>
+                            <span class="published">my thoughts and daily life</span>
+                        </header>
+                        <a href="https://blog.initprism.com" class="image bg5">
+                            <img src="/images/thumb/blog-thumb.png"alt="artboard" />
+                        </a>
+                    </article>
+
+                    <article class="mini-post">
+                        <header>
                             <h3><a href="https://photo.initprism.com">Photo</a></h3>
                             <span class="published">pictures of pieces of my memory</span>
                         </header>
                         <a href="https://photo.initprism.com" class="image bg5">
-                            <img src="/images/artboard.png"alt="artboard" />
+                            <img src="/images/thumb/photo-thumb.png"alt="artboard" />
                         </a>
                     </article>
                 </div>
@@ -102,7 +112,10 @@
             <!-- git links -->
             <section>
                 <ul class="posts">
-                    {{ macros::github(repo="ip", blurb="Haskell implemented IPv4 filtering application", thumb="ip.png") }}
+                    {{ macros::github(repo="ip", blurb="Haskell implemented IPv4 filtering application", thumb="git-ip.png") }}
+                </ul>
+                <ul class="posts">
+                    {{ macros::github(repo="codeforces-solution", blurb="codeforces solution written in c++, haskell", thumb="git-codeforces.png") }}
                 </ul>
             </section>
 

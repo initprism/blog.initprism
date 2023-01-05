@@ -6,7 +6,6 @@
     {% include "common/head.html" %}
 
     {% if page.extra.katex %}
-    <script src="/js/math.js"></script>
     {% include "common/katex.html" %}
     {% endif %}
 
@@ -41,8 +40,8 @@
             <center>
                 <ul class="actions pagination">
                     <li>
-                        {% if page.later %}
-                        <a href="{{ page.later.permalink }}" class="button big">
+                        {% if page.higher %}
+                        <a href="{{ page.higher.permalink }}" class="button big">
                             <i class="fao fa-chevron-double-left"></i>
                             Newer Post</a>
                         {% else %}
@@ -50,8 +49,8 @@
                         {% endif %}
                     </li>
                     <li>
-                        {% if page.earlier %}
-                        <a href="{{ page.earlier.permalink }}" class="button big">Older Post <i
+                        {% if page.lower %}
+                        <a href="{{ page.lower.permalink }}" class="button big">Older Post <i
                                 class="fao fa-chevron-double-right"></i></a>
                         {% else %}
                         <a href="#" class="disabled button big">Oldest Post</a>
@@ -66,6 +65,9 @@
         </div>
 
         <script src="/js/initprism.js"></script>
+        {% if page.extra.katex %}
+        <script src="/js/math.js"></script>
+        {% endif %}
 </body>
 
 </html>

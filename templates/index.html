@@ -14,7 +14,6 @@
 
     {% if include_katex %}
     {% include "common/katex.html" %}
-    <script src="/js/math.js"></script>
     {% endif %}
 
 </head>
@@ -134,6 +133,9 @@
     </div>   
 
     <script src="/js/initprism.js"></script>
+    {% if load_katex %}
+    <script src="/js/math.js"></script>
+    {% endif %}
 </body>
 
 </html>

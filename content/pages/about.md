@@ -23,10 +23,12 @@ time as I can writing Haskell and Rust. I write about of the things I do on [**t
 I hope to participate in an open-source project. and you can email me at [**initprism@gmail.com**](mailto:initprism@gmail.com)
 
 ### Things I’ve worked on
-<b>2021</b> ~ Worked on [MONITORAPP](https://www.monitorapp.com/)  
+<b>2020</b> ~ <b>2022</b> Worked at [MONITORAPP](https://www.monitorapp.com/)  
 <b>·</b> Developed Malicious Url Detection Solution  
+<b>·</b> [Universal Unpacking Method and Computing Device Using Memory Page Guard Attribute](https://patents.google.com/patent/KR102466000B1/ko)  
 <b>·</b> [Developed PE file unpacking system and method for static analysis of malicious code](https://patents.google.com/patent/KR102335475B1/ko)  
 <b>·</b> Developed Generic PE Unpacker  
+<b>2023</b> ~ Working at BLACKVERSE, a startup where I am engaged as a Backend Developer.
 
 ### Certification & License
 <b>·</b> Bachelor of Science in Computer Engineering  

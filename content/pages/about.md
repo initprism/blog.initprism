@@ -7,7 +7,6 @@ template = "about.html"
 <div class="bio">
     <img src="/images/taein-kim.jpg" title="TaeinKim" />
     <div class="caption">
-        <i>I recently changed my name. It used to be Doohwan, and now it is Taein.</i>
         <i> 
             <a href="mailto:initprism@gmail.com">initprism@gmail.com</a>,
             <a href="https://keybase.io/initprism/pgp_keys.asc">public key</a> 

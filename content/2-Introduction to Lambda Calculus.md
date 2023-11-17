@@ -111,7 +111,7 @@ $$
 # 2.7. Definition.
 (i). \\(\lambda-\\)계산의 주요 공리 체계는 다음과 같다.
 \\[(\lambda{x}.M)N = M[x := N]; \space \forall \space M, N \in \Lambda \qquad (\beta)\\]
-(ii). 또한 논리적(lgical) 공리와 규칙이 있다.
+(ii). 또한 논리적(logical) 공리와 규칙이 있다.
 - 동일성(Equality):
 
 $$
